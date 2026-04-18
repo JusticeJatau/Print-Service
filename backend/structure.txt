@@ -1,0 +1,90 @@
+backend/
+│
+├── src/
+│   ├── config/
+│   │   ├── database.js              # MongoDB connection
+│   │   ├── paystack.js              # Paystack configuration
+│   │   ├── backblaze.js             # Backblaze B2 configuration
+│   │   ├── multer.js                # File upload configuration
+│   │   ├── cors.js                  # CORS configuration
+│   │   └── rateLimit.js             # Rate limiting config
+│   │
+│   ├── models/
+│   │   ├── Order.js                 # Order schema
+│   │   ├── OrderItem.js             # Order item schema
+│   │   ├── Handout.js               # Handout schema
+│   │   ├── Pricing.js               # Pricing settings schema
+│   │   ├── User.js                  # User schema (admin/students)
+│   │   ├── Transaction.js           # Payment transactions schema
+│   │   └── File.js                  # Uploaded files metadata (with Backblaze URLs)
+│   │
+│   ├── controllers/
+│   │   ├── orderController.js       # Order CRUD operations
+│   │   ├── uploadController.js      # File upload handling (to Backblaze)
+│   │   ├── pricingController.js     # Pricing management
+│   │   ├── handoutController.js     # Handout management
+│   │   ├── paymentController.js     # Payment processing
+│   │   ├── adminController.js       # Admin dashboard operations
+│   │   └── authController.js        # Authentication
+│   │
+│   ├── routes/
+│   │   ├── orderRoutes.js           # Order endpoints
+│   │   ├── uploadRoutes.js          # File upload endpoints
+│   │   ├── pricingRoutes.js         # Pricing endpoints
+│   │   ├── handoutRoutes.js         # Handout endpoints
+│   │   ├── paymentRoutes.js         # Payment endpoints
+│   │   ├── adminRoutes.js           # Admin endpoints
+│   │   └── authRoutes.js            # Auth endpoints
+│   │
+│   ├── middleware/
+│   │   ├── auth.js                  # JWT verification
+│   │   ├── adminAuth.js             # Admin role verification
+│   │   ├── validation.js            # Request validation
+│   │   ├── errorHandler.js          # Global error handler
+│   │   ├── rateLimiter.js           # Rate limiting
+│   │   ├── fileValidation.js        # File type/size validation
+│   │   └── asyncHandler.js          # Async error wrapper
+│   │
+│   ├── services/
+│   │   ├── pdfParser.js             # PDF page counting
+│   │   ├── wordParser.js            # Word document parsing
+│   │   ├── backblazeService.js      # Backblaze B2 storage operations
+│   │   ├── paymentService.js        # Paystack integration
+│   │   ├── emailService.js          # Email notifications
+│   │   ├── orderService.js          # Order business logic
+│   │   └── cleanupService.js        # Clean up old files
+│   │
+│   ├── utils/
+│   │   ├── generateOrderId.js       # Unique order ID generator
+│   │   ├── calculatePrice.js        # Price calculation logic
+│   │   ├── helpers.js               # Helper functions
+│   │   ├── constants.js             # App constants
+│   │   └── validators.js            # Custom validators
+│   │
+│   ├── validators/
+│   │   ├── orderValidator.js        # Order input validation
+│   │   ├── handoutValidator.js      # Handout input validation
+│   │   ├── authValidator.js         # Auth input validation
+│   │   └── pricingValidator.js      # Pricing input validation
+│   │
+│   ├── webhooks/
+│   │   └── paystackWebhook.js       # Paystack webhook handler
+│   │
+│   ├── jobs/
+│   │   ├── cleanupJobs.js           # Clean up old temp files
+│   │   └── notificationJobs.js      # Scheduled notifications
+│   │
+│   └── app.js                       # Express app setup
+│
+├── uploads/                          # Temporary local storage (before Backblaze)
+│   ├── temp/                        # Temporary uploads before cloud
+│   └── logs/                        # Upload logs
+│
+├── logs/                             # Application logs
+│
+├── .env                              # Environment variables
+├── .gitignore                        # Git ignore file
+├── package.json                      # Dependencies
+├── package-lock.json                 # Lock file
+├── server.js                         # Entry point
+└── README.md                         # Documentation

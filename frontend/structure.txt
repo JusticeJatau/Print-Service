@@ -1,0 +1,104 @@
+campus-print-system/
+│
+├── public/
+│   └── vite.svg
+│
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   └── logo.svg
+│   │   └── icons/
+│   │       └── upload.svg
+│   │
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   └── Loader.jsx
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── Layout.jsx
+│   │   │
+│   │   ├── print/
+│   │   │   ├── FileUpload.jsx
+│   │   │   ├── FilePreview.jsx
+│   │   │   ├── PrintOptions.jsx
+│   │   │   └── SummaryCard.jsx
+│   │   │
+│   │   ├── cart/
+│   │   │   ├── CartItem.jsx
+│   │   │   └── CartSummary.jsx
+│   │   │
+│   │   ├── orders/
+│   │   │   ├── OrderCard.jsx
+│   │   │   └── OrderStatusBadge.jsx
+│   │   │
+│   │   └── admin/
+│   │       ├── AdminSidebar.jsx
+│   │       ├── OrdersTable.jsx
+│   │       ├── PricingForm.jsx
+│   │       └── HandoutUploader.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Print.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Checkout.jsx
+│   │   ├── Success.jsx
+│   │   ├── Orders.jsx
+│   │   ├── Handouts.jsx
+│   │   │
+│   │   └── admin/
+│   │       ├── Dashboard.jsx
+│   │       ├── Orders.jsx
+│   │       ├── Pricing.jsx
+│   │       └── Handouts.jsx
+│   │
+│   ├── routes/
+│   │   └── AppRoutes.jsx
+│   │
+│   ├── store/
+│   │   ├── cartStore.js
+│   │   └── userStore.js
+│   │
+│   ├── hooks/
+│   │   ├── useCart.js
+│   │   ├── useUpload.js
+│   │   └── usePricing.js
+│   │
+│   ├── services/
+│   │   ├── api.js
+│   │   └── payment.js
+│   │
+│   ├── lib/
+│   │   ├── pricing.js
+│   │   ├── fileParser.js
+│   │   └── utils.js
+│   │
+│   ├── mock/
+│   │   ├── orders.js
+│   │   ├── handouts.js
+│   │   └── pricing.js
+│   │
+│   ├── types/
+│   │   └── index.js
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── styles/
+│   │   └── global.css
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── .gitignore
